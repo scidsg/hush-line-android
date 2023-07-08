@@ -1,0 +1,88 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+}
+
+android {
+    namespace 'org.scidsg.hushline.android'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "org.scidsg.hushline.android"
+        minSdk 23
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.5.0-alpha04'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    //navigation component
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+
+    implementation 'androidx.recyclerview:recyclerview:1.3.0'
+    //implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+
+    //room
+    def room_version = "2.5.1"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    // Kotlin annotation processing tool (kapt)
+    kapt "androidx.room:room-compiler:$room_version"
+    // Kotlin Symbol Processing (KSP)
+    //ksp "androidx.room:room-compiler:$room_version"
+
+    //Dagger - Hilt
+    def hilt_version = "2.44"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+
+    //implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
+    //kapt "androidx.hilt:hilt-compiler:1.0.0"
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    implementation 'com.google.zxing:core:3.5.1'
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation "androidx.room:room-testing:$room_version"
+    //testImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
+    //kaptTest "com.google.dagger:hilt-compiler:$hilt_version"
+
+    //androidTestImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
+    //kaptAndroidTest "com.google.dagger:hilt-compiler:$hilt_version"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
+
+kapt {
+    correctErrorTypes true
+}

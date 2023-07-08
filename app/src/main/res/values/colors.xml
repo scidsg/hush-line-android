@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="toolbar_background">#EEEFF5</color>
+    <color name="toolbar_background_darker">#BFC0C3</color>
+    <color name="primary_text_color">#1C1B1F</color>
+    <color name="toolbar_text_color">@color/primary_text_color</color>
+    <color name="custom_switch_handle_color_unchecked">#79747E</color>
+    <color name="custom_switch_track_color_unchecked">#E7E0EC</color>
+    <color name="custom_switch_track_border_color">#79747E</color>
+    <color name="custom_switch_track_color_checked">@color/primary_text_color</color>
+</resources>
