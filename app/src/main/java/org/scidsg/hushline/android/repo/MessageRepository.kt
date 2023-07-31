@@ -31,6 +31,24 @@ class MessageRepository @Inject constructor(
         )
     }
 
+    suspend fun notifyMessage(message: String): Boolean {
+        //todo encrypt with pgp
+        //send encrypted email
+        return true
+    }
+
+    fun encryptMessage(message: String, pubKey: String): String {
+        return ""
+    }
+
+    fun decryptMessage(message: String, privKey: String): String {
+        return ""
+    }
+
+    fun emailEncryptedMessage(message: String): Boolean {
+        return true
+    }
+
     private fun test(context: Context): List<MessageEntity> {
         //test
         val dt = context.getString(R.string.subhead_sample)
