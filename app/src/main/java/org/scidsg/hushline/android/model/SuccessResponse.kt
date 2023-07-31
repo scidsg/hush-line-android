@@ -1,5 +1,6 @@
 package org.scidsg.hushline.android.model
 
-data class OKResponse(
+@kotlinx.serialization.Serializable
+data class SuccessResponse(
     val success: Boolean
 )
