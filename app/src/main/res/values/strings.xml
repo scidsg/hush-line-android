@@ -53,4 +53,19 @@
     <string name="share_dialog_title">Share via</string>
     <string name="close">Close</string>
     <string name="qr_code_failed">Failed to create QR code. Try again.</string>
+    <string name="running_notification_title">HushLine is currently running.</string>
+    <string name="starting_notification_title">Starting hush line…</string>
+    <string name="starting_notification_text">This may take a while.</string>
+    <string name="notification_running_title">Hush Line available.</string>
+    <string name="notification_running_text">Tap to access the address for receiving messages and tips.</string>
+    <string name="notification_error_title">Hush Line encountered an issue.</string>
+    <string name="notification_error_text">Tap to see details.</string>
+    <string name="notification_channel_name_foreground">Hush Line running status</string>
+    <string name="notification_channel_name_running">Messaging address available</string>
+    <string name="notification_channel_name_error">Error</string>
+    <string name="hushline_starting">Hush Line starting…</string>
+    <string name="onion_url">http://%1$s.onion</string>
+    <string name="hushline_stopping">Hush Line stopping…</string>
+    <string name="hushline_stopped">Hush Line stopped.</string>
+    <string name="hushline_error">Hush Line error.</string>
 </resources>
